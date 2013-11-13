@@ -1,1 +1,1 @@
-run Rack::Static.new @app, urls: [""], root: '.', index: 'index.html'
+run Rack::Static.new @app, urls: ["/css", ""], root: '.', index: 'index.html'
