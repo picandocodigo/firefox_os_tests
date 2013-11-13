@@ -1,7 +1,16 @@
-<ul>
-  <li><a id="vibrate" href="#">Vibrate</a></li>
-  <li><input type="file" id="take-picture" accept="image/*"/></li>
-</ul>
-<img src="about:blank" alt="" id="show-picture">
+<html>
+<head>
+  <link href="./css/action_menu.css" rel="stylesheet" type="text/css">
+</head>
+<body>
 
-<script type="text/javascript" src="main.js"></script>
+<form role="dialog" data-type="action">
+  <header>Demos</header>
+  <menu>
+    <button type="button" onclick="window.location.href='vibration.html'">Vibrate</button>
+    <button type="button" onclick="window.location.href='picture.html'">Picture</button>
+    <button type="button" onclick="window.location.href='about.html'">About</button>
+  </menu>
+</form>
+</body>
+</html>
