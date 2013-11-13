@@ -1,14 +1,4 @@
-var event = document.getElementById("vibrate");
-event.addEventListener("click", function(){
-  vibrate = window.navigator.vibrate(200);
-  if (!vibrate){
-    alert("false");
-  }
-}, false);
-
-
 var file;
-
 var takePicture = document.querySelector("#take-picture");
 var showPicture = document.querySelector("#show-picture");
 

@@ -1,0 +1,30 @@
+<button id="vibrate">Vibrate</button>
+
+<button id="start_vibration">Start vibration</button>
+<button id="stop_vibration">Stop vibration</button>
+
+<script type="text/javascript">
+
+  var one_vibe = document.getElementById("vibrate");
+  one_vibe.addEventListener("click", function(){
+    vibrate(200);
+  }, false);
+
+  var start = document.getElementById("start_vibration");
+  start.addEventListener("click", function(){
+    vibrate(9999);
+  }, false);
+
+  var stop = document.getElementById("stop_vibration");
+  stop.addEventListener("click", function(){
+    vibrate(0);
+  }, false);
+
+
+  function vibrate(duration){
+    vibration = window.navigator.vibrate(duration);
+    if (!vibration){
+      alert("This device doesn't support vibration");
+    }
+  }
+</script>
