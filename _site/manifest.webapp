@@ -2,7 +2,6 @@
   "name": "picandocodigo tests",
   "description": "Firefox OS tests",
   "launch_path": "/firefox_os_tests/index.html",
-  "appcache_path": "/firefox_os_tests/manifest.appcache",
   "icons": {
     "128": "/img/icon-128.png"
   },
