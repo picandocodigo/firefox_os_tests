@@ -7,6 +7,28 @@ layout: default
     <button type="button" onclick="window.location.href='vibration.html'">Vibrate</button>
     <button type="button" onclick="window.location.href='picture.html'">Picture</button>
     <button type="button" onclick="window.location.href='about.html'">About</button>
+    <span id="install"></span>
   </menu>
 </form>
-<!-- window.history.back(); -->
+<script type="text/javascript">
+window.onload = function(){
+  if (navigator.mozApps){
+    html = "<button type=\"button\" id=\"mozilla_app\">Install</button>"
+    document.getElementById("install").innerHTML = html
+
+    var app = document.getElementById("mozilla_app");
+    app.addEventListener('click', function(){
+      var manifestURL = location.href.substring(0, location.href.lastIndexOf("/")) + "/manifest.webapp";
+      var installApp = navigator.mozApps.install(manifestURL);
+
+      installApp.onsuccess = function() {
+        alert("App installed");
+      };
+      installApp.onerror = function() {
+        alert(this.error.name);
+      };
+    });
+  }
+};
+
+</script>
