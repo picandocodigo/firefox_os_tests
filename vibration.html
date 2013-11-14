@@ -12,9 +12,13 @@ layout: default
   }, false);
 
   var start = document.getElementById("start_vibration");
-  start.addEventListener("click", function(){
-    vibrate(9999);
-  }, false);
+  if(window.navigator.vibrate){
+    start.addEventListener("click", function(){
+      setInterval(function(){
+        vibrate(1);
+      },1)
+    }, false);
+  }
 
   var stop = document.getElementById("stop_vibration");
   stop.addEventListener("click", function(){
@@ -23,8 +27,9 @@ layout: default
 
 
   function vibrate(duration){
-    var vibration = window.navigator.vibrate(duration);
-    if (!vibration){
+    if(window.navigator.vibrate){
+      var vibration = window.navigator.vibrate(duration);
+    } else {
       alert("This device doesn't support vibration");
     }
   }
