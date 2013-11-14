@@ -28,13 +28,10 @@
   }, false);
 
   var start = document.getElementById("start_vibration");
-  if(window.navigator.vibrate){
     start.addEventListener("click", function(){
-      setInterval(function(){
-        vibrate(1);
-      },1)
+      vibrate(9999);
     }, false);
-  }
+
 
   var stop = document.getElementById("stop_vibration");
   stop.addEventListener("click", function(){
