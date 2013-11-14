@@ -1,7 +1,7 @@
 {
   "name": "picandocodigo tests",
   "description": "Firefox OS tests",
-  "launch_path": "/index.html",
+  "launch_path": "_site/index.html",
   "icons": {
     "128": "/img/icon-128.png"
   },

@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <link href="./styles/action_menu.css" rel="stylesheet" type="text/css"/>
+    <link href="./styles/headers.css" rel="stylesheet" type="text/css">
+    <link href="./styles/buttons.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <section role="region">
+  <header>
+    <button id="go-back">
+      <span class="icon icon-back">back</span>
+    </button>
+    <h1>Firefox OS Demos</h1>
+  </header>
+</section>
+
+<script type="text/javascript">
+  var back = document.getElementById("go-back");
+
+  back.addEventListener("click", function(){
+    window.history.back();
+  }, false);
+
+</script>
+    <p>
+  Firefox Test App by <a href="http://picandocodigo.net" target="_blank">Fernando Briano</a>.
+</p>
+<p>
+<a href="https://github.com/picandocodigo/firefox_os_tests" target="_blank">Fork on GitHub</a>
+</p>
+  </body>
+</html>

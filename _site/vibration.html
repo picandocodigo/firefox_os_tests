@@ -1,21 +1,26 @@
 <html>
   <head>
     <link href="./styles/action_menu.css" rel="stylesheet" type="text/css"/>
+    <link href="./styles/headers.css" rel="stylesheet" type="text/css">
     <link href="./styles/buttons.css" rel="stylesheet" type="text/css"/>
-    <link href="./styles/toolbars.css" rel="stylesheet" type="text/css"/>
-    <link href="./styles/icons/action_icons.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
-    <div role="toolbar">
-  <ul>
-    <li><button class="action-icon back" id="go-back">Back</button></li>
-  </ul>
-</div>
+    <section role="region">
+  <header>
+    <button id="go-back">
+      <span class="icon icon-back">back</span>
+    </button>
+    <h1>Firefox OS Demos</h1>
+  </header>
+</section>
+
 <script type="text/javascript">
   var back = document.getElementById("go-back");
+
   back.addEventListener("click", function(){
     window.history.back();
   }, false);
+
 </script>
     <button type="button" id="vibrate">Vibrate</button>
 <button type="button" id="start_vibration">Start vibration</button>

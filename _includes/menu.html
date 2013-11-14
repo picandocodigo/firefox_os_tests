@@ -1,11 +1,17 @@
-<div role="toolbar">
-  <ul>
-    <li><button class="action-icon back" id="go-back">Back</button></li>
-  </ul>
-</div>
+<section role="region">
+  <header>
+    <button id="go-back">
+      <span class="icon icon-back">back</span>
+    </button>
+    <h1>Firefox OS Demos</h1>
+  </header>
+</section>
+
 <script type="text/javascript">
   var back = document.getElementById("go-back");
+
   back.addEventListener("click", function(){
     window.history.back();
   }, false);
+
 </script>
