@@ -1,15 +1,11 @@
-<html>
-<head>
-<link href="./css/buttons.css" rel="stylesheet" type="text/css">
-</head>
-
-<body>
+---
+layout: default
+---
 <button type="button" id="vibrate">Vibrate</button>
 <button type="button" id="start_vibration">Start vibration</button>
 <button type="button" id="stop_vibration">Stop vibration</button>
 
 <script type="text/javascript">
-
   var one_vibe = document.getElementById("vibrate");
   one_vibe.addEventListener("click", function(){
     vibrate(200);
@@ -27,11 +23,9 @@
 
 
   function vibrate(duration){
-    vibration = window.navigator.vibrate(duration);
+    var vibration = window.navigator.vibrate(duration);
     if (!vibration){
       alert("This device doesn't support vibration");
     }
   }
 </script>
-</body>
-</html>

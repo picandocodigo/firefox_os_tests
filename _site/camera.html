@@ -1,0 +1,34 @@
+<script type="text/javascript">
+var pc = new mozRTCPeerConnection;
+ 
+navigator.mozGetUserMedia({video: true},
+  function (mediaStream) {
+ 
+    // Create a new self-view video element
+    var video = document.createElement("video");
+    video.setAttribute("width", 640);
+    video.setAttribute("height", 480);
+    video.setAttribute("style", "transform: scaleX(-1)");
+    video.src = window.URL.createObjectURL(mediaStream);
+    document.body.appendChild(video);
+    video.play();
+ 
+    // Add a button to hold/unhold video stream
+    var button = document.createElement("button");
+    button.appendChild(document.createTextNode("Toggle Hold"));
+    button.onclick = function(){
+      mediaStream.getVideoTracks()[0].enabled =
+         !(mediaStream.getVideoTracks()[0].enabled);
+    }
+    document.body.appendChild(document.createElement("br"));
+    document.body.appendChild(button);
+ 
+    // Add the mediaStream to the peer connection
+    pc.addStream(mediaStream);
+ 
+    // At this point, you're ready to start the call with
+    // pc.setRemoteDescription() or pc.createOffer()
+  },
+  function (err) { alert(err); }
+);
+</script>

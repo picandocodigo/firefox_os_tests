@@ -1,0 +1,11 @@
+<div role="toolbar">
+  <ul>
+    <li><button class="action-icon back" id="go-back">Back</button></li>
+  </ul>
+</div>
+<script type="text/javascript">
+  var back = document.getElementById("go-back");
+  back.addEventListener("click", function(){
+    window.history.back();
+  }, false);
+</script>
